@@ -3,7 +3,7 @@
 COIN_NAME='raptoreum'
 
 #wallet information
-BOOTSTRAP_TAR='https://bootstrap.raptoreum.com/bootstrap_with_indexes.tar.xz'
+BOOTSTRAP_TAR='https://bootstrap.raptoreum.com/bootstraps_for_v1.2.15.3/bootstrap.tar.xz'
 CONFIG_DIR='.raptoreumcore'
 CONFIG_FILE='raptoreum.conf'
 PORT='10226'
@@ -80,7 +80,7 @@ function create_swap() {
   echo -e "${YELLOW}Creating swap if none detected...${NC}" && sleep 1
   if ! grep -q "swapfile" /etc/fstab; then
     if whiptail --yesno "No swapfile detected would you like to create one?" 8 54; then
-      sudo fallocate -l 4G /swapfile
+      sudo fallocate -l 3G /swapfile
       sudo chmod 600 /swapfile
       sudo mkswap /swapfile
       sudo swapon /swapfile
@@ -144,9 +144,6 @@ port=$PORT
 server=1
 daemon=1
 listen=1
-index=1
-txindex=1
-addressindex=1
 smartnodeblsprivkey=$smartnodeblsprivkey
 externalip=$WANIP
 maxconnections=125

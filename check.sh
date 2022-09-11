@@ -3,7 +3,7 @@
 URL=( 'https://explorer.raptoreum.com/' 'https://raptor.mopsus.com/' )
 URL_ID=0
 
-BOOTSTRAP_TAR='https://bootstrap.raptoreum.com/bootstrap_with_indexes.tar.xz'
+BOOTSTRAP_TAR='https://bootstrap.raptoreum.com/bootstraps_for_v1.2.15.3/bootstrap.tar.xz'
 
 POSE_SCORE=0
 PREV_SCORE=0
